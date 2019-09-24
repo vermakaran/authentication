@@ -89,14 +89,14 @@ public class Login extends Fragment implements View.OnClickListener {
         int id = view.getId();
         if (id == R.id.btLogin) {
             if (TextUtils.isEmpty(etEmail.getText().toString())) {
-                etEmail.setError("Email tera buddha likhhu0");
+                etEmail.setError("Enter Email");
                 etEmail.requestFocus();
             } else if (TextUtils.isEmpty(etPass.getText().toString())) {
-                etPass.setError("password tera buddha likhhu");
+                etPass.setError("password ");
                 etPass.requestFocus();
             } else {
                 if (etPass.getText().toString().length() < 6) {
-                    etPass.setError("poooooora 6 akhra da likh");
+                    etPass.setError("sixdigit");
                     etPass.requestFocus();
                 } else {
                     String email = etEmail.getText().toString();
@@ -121,7 +121,7 @@ user=auth.getCurrentUser();
 if (user!=null)
 {
     updateUI(user);
-    Toast.makeText(getActivity().getApplicationContext(),"User already logged in",Toast.LENGTH_LONG).show();
+    Toast.makeText(getActivity().getApplicationContext(),"logged in already",Toast.LENGTH_LONG).show();
 }
     }
 
@@ -131,9 +131,9 @@ if (user!=null)
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     user = auth.getCurrentUser();
-                    Toast.makeText(getActivity().getApplicationContext(), "Login Success", Toast.LENGTH_LONG);
+                    Toast.makeText(getActivity().getApplicationContext(), "Login Successful", Toast.LENGTH_LONG);
                 } else {
-                    Toast.makeText(getActivity().getApplicationContext(), "Login unSuccess", Toast.LENGTH_LONG);
+                    Toast.makeText(getActivity().getApplicationContext(), "Login unSuccessful", Toast.LENGTH_LONG);
                 }
             }
         });
