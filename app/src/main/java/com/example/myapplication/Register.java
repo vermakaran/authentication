@@ -105,7 +105,7 @@ public class Register extends Fragment {
                   etPassword.requestFocus();
                   }else if(!etPassword.getText().toString().equals(etPassword.getText().toString()))
                   {
-                      etPassword.setError("Password missssss match");
+                      etPassword.setError("Password doesnot match");
 
                       etPassword.requestFocus();
                   }else
@@ -133,19 +133,19 @@ createUser(name,email,pass);
     {
         if(TextUtils.isEmpty(etName.getText().toString()))
         {
-            etName.setError("name is blank");
+            etName.setError("enter name ");
             etName.requestFocus();
             return true;
 
         }else if(TextUtils.isEmpty(etPassword.getText().toString()))
     {
-        etPassword.setError("password is blank");
+        etPassword.setError("enterpassword ");
         etPassword.requestFocus();
         return true;
 
     }else if(TextUtils.isEmpty(etConfirm.getText().toString()))
         {
-            etConfirm.setError("password is blank");
+            etConfirm.setError("empty password ");
             etConfirm.requestFocus();
             return true;
 
